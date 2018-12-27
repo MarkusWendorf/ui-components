@@ -1,4 +1,4 @@
-Radio example:
+Checkbox example:
 
 ```js
 <Checkbox onChange={(checked) => console.log(checked)}>
