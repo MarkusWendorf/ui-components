@@ -1,0 +1,39 @@
+{
+  "name": "shop-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --host 0.0.0.0 --port 4444",
+    "build": "webpack -p",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "styleguide": "npx styleguidist server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-router": "^4.4.3",
+    "@types/react-router-dom": "^4.3.1",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.3",
+    "react-docgen-typescript": "^1.12.2",
+    "react-styleguidist": "^8.0.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^5.2.1",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  }
+}

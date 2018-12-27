@@ -1,0 +1,48 @@
+@import "../../main";
+
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 3px;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox__box {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $grey;
+  padding: 0.5rem;
+  width: fit-content;
+  color: $grey-dark;
+  border-bottom: 2px solid $grey-dark;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+
+  > input {
+    display: none;
+  }
+
+  > svg {
+    stroke-width: 3;
+  }
+
+}
+
+.checkbox.active > .checkbox__box {
+  color: $main;
+}
+
+.checkbox.disabled > .checkbox__box:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  transform: rotateZ(45deg);
+  background-color: $grey-dark;
+}

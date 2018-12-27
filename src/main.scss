@@ -1,0 +1,13 @@
+$main: #005bf3;
+$main-dark: darken($main, 20);
+$grey: #f1f1f1;
+$hover: lighten($main, 5);
+$grey-dark: #c5c6c8;
+$text-grey: #767676;
+
+html {
+  width: 100%;
+  font-family: sans-serif;
+  box-sizing: content-box;
+}
+

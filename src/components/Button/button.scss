@@ -1,0 +1,58 @@
+@import "../../main";
+
+.button {
+  padding: 0.8rem 1.5rem;
+  background-color: $main;
+  border: 1px solid $main;
+  border-bottom: 3px solid $main-dark;
+  border-radius: 3px;
+  outline: 0;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  margin: 3px;
+
+  &:hover {
+    border: 1px solid $hover;
+    border-bottom: 3px solid $main-dark;
+    background-color: $hover;
+  }
+
+  &:active {
+    border-bottom: 3px solid transparent;
+    transform: translateY(1px);
+  }
+}
+
+.button.button--secondary {
+  position: relative;
+  border: 1px solid $main;
+  background-color: #fff;
+  color: $main;
+
+  &:hover {
+    border-color: $hover;
+    color: $hover;
+  }
+}
+
+.button.button--disabled {
+  background-color: $grey-dark;
+  border: 1px solid $grey-dark;
+  border-bottom: 3px solid darken($grey-dark, 20);
+  color: #fff;
+  cursor: default;
+
+  &:hover, &:active {
+    background-color: $grey-dark;
+    transform: none;
+  }
+}
+
+.button.button--secondary.button--disabled {
+  border-color: $grey-dark;
+  background-color: #fff;
+  border-bottom: 1px solid $grey-dark;
+  color: $grey-dark;
+}

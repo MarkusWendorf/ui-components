@@ -1,0 +1,45 @@
+@import "../../main";
+
+$padding-left: 1rem;
+
+.input {
+  position: relative;
+  display: block;
+  padding: 1.25rem $padding-left 0.5rem $padding-left;
+  background-color: $grey;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-bottom: 2px solid $grey-dark;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0.5rem;
+
+  .input-label {
+    position: absolute;
+    top: 0.5rem;
+    left: $padding-left;
+    font-size: 0.8rem;
+    color: $main;
+  }
+
+  input {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 3px 0;
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $grey-dark;
+  }
+
+  &.input--invalid {
+    border: 1px solid red;
+
+    &:after {
+      display: block;
+      content: attr(data-error);
+      padding: 1rem 0 0.5rem 0;
+      font-size: 0.9rem;
+    }
+  }
+}

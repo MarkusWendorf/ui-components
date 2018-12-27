@@ -1,0 +1,15 @@
+@import "../../main";
+
+.tag {
+  border-radius: 3px;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin: 3px;
+  color: #fff;
+  text-decoration: none;
+  background-color: darken($main, 20);
+}

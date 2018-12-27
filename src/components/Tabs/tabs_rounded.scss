@@ -1,0 +1,96 @@
+@import "../../main";
+
+
+.tabs__container {
+  display: flex;
+}
+
+.tabs__labels {
+  display: flex;
+  border-bottom: 2px solid $main;
+}
+
+.tabs__label {
+  position: relative;
+  flex: 1;
+  color: $main;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-right: inherit;
+  cursor: pointer;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: $grey;
+
+  &.active {
+    color: #fff;
+    background-color: $main;
+    border-color: $main;
+
+    > span:before, > span:after {
+      display: block;
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      bottom: 0;
+      border-radius: 50%;
+      background-color: $grey;
+      z-index: 2;
+    }
+
+    &:before, &:after {
+      display: block;
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      bottom: 0;
+      background-color: $main;
+      z-index: 1;
+    }
+
+    &:not(:last-of-type) {
+
+      &:after {
+        right: -0.5rem;
+        content: "";
+      }
+
+      > span:after {
+        right: -1rem;
+        content: "";
+      }
+    }
+
+    &:not(:first-of-type) {
+
+      &:before {
+        left: -0.5rem;
+        content: "";
+      }
+
+      > span:before {
+        left: -1rem;
+        content: "";
+      }
+    }
+
+  }
+}
+
+.tabs__element {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 100%;
+  margin-left: -100%;
+  float: left;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
