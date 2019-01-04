@@ -3,4 +3,4 @@ A set of simple react ui components
 
 ## Styleguide
 
-** $ npm run styleguide **
+**$ npm run styleguide**
