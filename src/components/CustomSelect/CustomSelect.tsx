@@ -22,8 +22,8 @@ class CustomSelect extends React.Component<Props, State> {
     public render() {
 
         return (
-            <div className="select">
-                <div className="select__text" onClick={this.toggleModal}>
+            <div className="custom-select">
+                <div className="custom-select__text" onClick={this.toggleModal}>
                     {this.state.selected || this.props.helperText}
                 </div>
                 <ChevronDown/>

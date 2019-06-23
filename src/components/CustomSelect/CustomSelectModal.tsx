@@ -27,15 +27,15 @@ class CustomSelectModal extends React.Component<Props, State> {
         const {items, text} = this.state;
 
         return (
-            <div className={"custom-select " + (this.props.open ? "open" : "")} onClick={this.close}>
-                <div className="custom-select__body">
+            <div className={"custom-select-modal " + (this.props.open ? "open" : "")} onClick={this.close}>
+                <div className="custom-select-modal__body">
                     <input
                         value={text}
                         onChange={this.onChange}
                         ref={(input) => input && input.focus()}
-                        className={"custom-select__input"}
+                        className={"custom-select-modal__input"}
                     />
-                    <ul className={"custom-select__items"}>
+                    <ul className={"custom-select-modal__items"}>
                         {items.filter((item) =>
                             item.title.toLowerCase().startsWith(text.toLowerCase()),
                         ).map((item: any) =>
