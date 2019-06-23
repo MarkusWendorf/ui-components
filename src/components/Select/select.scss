@@ -9,10 +9,10 @@
   color: $main;
   padding: 0.5rem;
 
-  > select {
+  > .select {
     display: block;
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
     border: 0;
     border-bottom: 2px solid $grey-dark;
     border-radius: 3px;

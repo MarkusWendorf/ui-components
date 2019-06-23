@@ -4,6 +4,7 @@ import Select from "./components/Select/Select";
 import Option from "./components/Select/Option";
 import RegexInput from "./components/Inputs/RegexInput/RegexInput";
 import Form from "./components/Form/Form";
+import CustomSelect from "./components/CustomSelect/CustomSelect";
 
 const validators = {
     height: (values: { [field: string]: any }) => {
@@ -16,22 +17,23 @@ const validators = {
 
 };
 
-const Main = () => (
-    <div>
-        <Form onSubmit={(form) => console.log(form)} validatorMap={validators}>
-            {(form) => (
-                <div>
-                    <Select defaultValue={"Default"} onChange={form.update("selectOption")}>
-                        <Option>Option 1</Option>
-                        <Option>Default</Option>
-                        <Option>Option 3</Option>
-                    </Select>
-                    <RegexInput label="Favourite Number" onChange={form.update("favNumber")} regex={/^\d*$/}/>
-                    <button type="submit">Submit</button>
-                </div>
-            )}
-        </Form>
-    </div>
-);
+class Main extends React.Component {
+
+    public state = {
+        open: false,
+    };
+
+    public render() {
+
+        return (
+            <div>
+                <p>{JSON.stringify(this.state)}</p>
+                <input/>
+                <button onClick={() => this.setState({ open: !this.state.open})}>Show</button>
+                <CustomSelect helperText={"Wohnort auswählen"}/>
+            </div>
+        );
+    }
+}
 
 export default Main;
